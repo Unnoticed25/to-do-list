@@ -1,0 +1,162 @@
+body{
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.todo-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 0.67em;
+}
+
+.todo-input{
+    background-color: #390162;
+    color: white;
+    border: none;
+    padding: 0.55rem;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.tasks-container{
+    padding: 20px;
+    margin: 20px auto auto;
+    border-radius: 16px;
+    max-width: 800px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: indigo;
+    transition: 0.2s all ease-in-out;
+}
+
+.todo-btn:disabled{
+    color: darkgray !important;
+    border: 1px solid rgba(169, 169, 169, 0.5) !important;
+}
+
+.task-space{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    cursor: default;
+}
+.task-space > input{
+    min-width: 30px;
+    min-height: 30px;
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, 20%);
+}
+.task-space > input:not(:checked){
+    cursor: pointer;
+    background-size: 30px 30px;
+}
+.task-space > input:checked{
+    cursor: pointer;
+}
+.task-space > div > .del-btn{
+    background-color: #820000;
+    background-image: url("./svg/multiply-cancel-svgrepo-com.svg");
+    background-size: 42px 42px;
+    border-radius: 999px;
+    cursor: pointer;
+    min-width: 42px;
+    min-height: 42px;
+    border: none;
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, 20%);
+    transition: all 0.2s ease-out;
+}
+
+.task-space > div > .del-btn:hover{
+    background-color: #770000;
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, 20%);
+    background-size: 45px 45px;
+    min-width: 45px;
+    min-height: 45px;
+}
+.task-space > div > .del-btn:disabled{
+    min-width: 42px;
+    min-height: 42px;
+    background-size: 42px 42px;
+    box-shadow: none;
+    background-image: url("./svg/multiply-cancel-svgrepo-com.svg");
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.task__title{
+    white-space: nowrap;
+}
+
+.task__title:hover{
+    position: relative;
+    padding: 12px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 50%);
+    border-radius: 2px;
+    overflow: visible;
+    display: flex;
+    white-space: break-spaces;
+    word-break: break-all;
+    transition: 0.2s all ease-in-out;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.task-space > input:disabled{
+    cursor: not-allowed;
+}
+
+.error-msg{
+    display: flex;
+    justify-content: start;
+    margin: 10px 0 0 10px;
+    color: red;
+    font-size: 14px;
+}
+
+.error-blur:focus{
+    outline: solid 1px red;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+form > button{
+    height: 100%;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 550px){
+    .input-wrapper{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    form{
+        flex-flow: wrap;
+        justify-content: center !important;
+        align-items: center;
+
+    }
+
+    .todo-btn{
+        margin: 10px 0 0 0 !important;
+    }
+}
+
+.task-space__btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
